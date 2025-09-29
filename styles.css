@@ -1,4 +1,3 @@
-/* ===== Reset / Base ===== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
@@ -18,7 +17,6 @@ a:hover { text-decoration: underline; }
 
 .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
 
-/* ===== Header (Flex #1) ===== */
 .site-header {
   background: #0e4a73;
   color: white;
@@ -27,7 +25,6 @@ a:hover { text-decoration: underline; }
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Make the header a flex row: brand left, nav right */
 .site-header .wrap {
   display: flex;
   align-items: center;
@@ -40,7 +37,7 @@ a:hover { text-decoration: underline; }
   margin: 0;
 }
 
-.main-nav { /* remove float; nav items stay horizontal via flex below */ }
+.main-nav {}
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -52,31 +49,26 @@ a:hover { text-decoration: underline; }
   font-weight: 600;
 }
 
-/* ===== Main row (Flex #2) ===== */
 .content-wrapper {
   display: flex;
   align-items: flex-start;
   gap: 20px;
   margin-bottom: 20px;
-  background: transparent; /* pattern is on html */
+  background: transparent; 
 }
 
-/* Remove old clearfix (no longer needed) */
 .content-wrapper::after { content: none; }
 
-/* Main content card */
 .main-content {
   flex: 1 1 65%;
   padding: 20px;
   background-color: #fff;
   border: 1px solid #d6dbe0;
   border-radius: 6px;
-  /* remove layout floats */
 }
 
-/* Profile image: the ONLY float allowed (to wrap text) */
 .profile {
-  float: left;                 /* allowed per assignment for text wrap */
+  float: left;
   width: 150px;
   height: 150px;
   object-fit: cover;
@@ -85,7 +77,6 @@ a:hover { text-decoration: underline; }
   border-radius: 6px;
 }
 
-/* Sidebar card */
 .sidebar {
   flex: 0 0 30%;
   background: #fff;
@@ -93,12 +84,11 @@ a:hover { text-decoration: underline; }
   border: 1px solid #d6dbe0;
   border-radius: 6px;
   position: sticky;
-  top: 90px;                   /* optional: keeps it visible while scrolling */
+  top: 90px;
 }
 
 .sidebar h3 { margin-bottom: 8px; }
 
-/* Social icons — already flex; ensure icons-only layout is tidy */
 .social {
   display: flex;
   justify-content: flex-start;
@@ -127,11 +117,10 @@ a:hover { text-decoration: underline; }
   display: block;
 }
 
-/* ===== Footer (Flex #3) ===== */
 .site-footer {
   background: #e9eef2;
   padding: 12px 0;
-  text-align: center; /* fallback */
+  text-align: center;
   border-top: 1px solid #d6dbe0;
   margin-top: 20px;
 }
@@ -142,7 +131,6 @@ a:hover { text-decoration: underline; }
   justify-content: center;
 }
 
-/* ===== Responsive ===== */
 @media (max-width: 900px) {
   .content-wrapper {
     flex-direction: column;
@@ -150,7 +138,7 @@ a:hover { text-decoration: underline; }
   .sidebar {
     position: static;
     top: auto;
-    order: -1; /* move sidebar above content if you like; remove if not desired */
+    order: -1;
   }
 }
 
