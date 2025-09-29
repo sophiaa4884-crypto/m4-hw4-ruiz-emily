@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Emily Ruiz — About</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="wrap header-inner">
+      <h1 class="site-title">Emily Ruiz</h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Pattern sits behind this whole area -->
+  <div class="wrap content-wrapper" role="region" aria-label="Main content and sidebar">
+    <main id="about" class="main-content">
+      <img src="images/profile.jpg" alt="Emily Ruiz" class="profile" />
+      <h2>About Me</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ipsam temporibus quasi sequi fugit culpa doloremque eligendi accusantium nihil mollitia. Vel quisquam veritatis cum aliquid perferendis placeat fuga dolorem, cumque maxime, expedita rem, aperiam voluptatibus rerum suscipit aut eum! Laudantium velit placeat totam aut reiciendis nam eum quod rerum et!
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ducimus dignissimos, laboriosam unde repellendus voluptatibus, inventore voluptatum suscipit corporis sapiente, quas dicta! Consequuntur, ipsa voluptates ea deleniti ipsum voluptatum quidem dolor a maiores vel consequatur maxime nihil vero, dicta, reprehenderit tempore rem sed ex eligendi animi velit...
+      </p>
+
+      <section id="portfolio" aria-labelledby="portfolio-title">
+        <h2 id="portfolio-title">Portfolio</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p>Email me at <a href="mailto:emily@example.com">emily@example.com</a></p>
+      </section>
+    </main>
+
+    <aside class="sidebar" aria-labelledby="connect">
+      <h3 id="connect">Connect with me!</h3>
+      <ul class="social" role="list">
+        <li>
+          <a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer" aria-label="Stack Overflow">
+            <img src="images/soverflow.png" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/emily-sophia-ruiz-813b6421a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="images/linkedin.png" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/sophiaa4884-crypto" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <img src="images/git.png" alt="" />
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap footer-inner">
+      <p>&copy; <span id="year"></span> Emily Ruiz</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
